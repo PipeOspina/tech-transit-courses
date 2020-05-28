@@ -1,0 +1,44 @@
+{
+  "name": "tech-transit-courses",
+  "version": "0.1.0",
+  "description": "Basic Course Catalog - A technical test for Tech Transit - Spring 2020",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config app.js ",
+    "start:dev": "nodemon -r dotenv/config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PipeOspina/tech-transit-courses.git"
+  },
+  "keywords": [
+    "courses",
+    "catalog",
+    "test",
+    "tech-transit",
+    "awesome",
+    "incredible",
+    "brilliant",
+    "cool",
+    "pipe",
+    "dream-job"
+  ],
+  "author": {
+    "name": "Felipe Ospina",
+    "email": "pipe.98.oh@gmail.com",
+    "url": "https://github.com/PipeOspina"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PipeOspina/tech-transit-courses/issues"
+  },
+  "homepage": "https://github.com/PipeOspina/tech-transit-courses#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
