@@ -8,12 +8,9 @@ const startDB = async () => {
     const url = `mongodb://${DB_HOST}:${DB_PORT}`
     const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
-    console.log(`Connecting to database...`)
-
     try {
         await client.connect()
         const db = client.db(DB_NAME)
-        console.log(`Connection to '${db.databaseName}' at ${url} completed successfully!`)
         return { client, db };
     } catch(err) {
         console.log(err.stack)

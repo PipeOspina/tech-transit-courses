@@ -3,11 +3,11 @@ const { changeIds } = require('../utils')
 
 const COLLECTION_NAME = 'Courses'
 
-const getCourses = async () => {
+const getCourses = async (query) => {
     try {
         const { db, client } = await startDB()
         const courseCollection = await db.collection(COLLECTION_NAME)
-        const coursesCursor = await courseCollection.find()
+        const coursesCursor = await courseCollection.find(query ? query : '')
         const courses = await coursesCursor.toArray()
         client.close()
         return courses
