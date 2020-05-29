@@ -4,7 +4,7 @@ const DB_HOST = process.env.DB_HOST || 'localhost'
 const DB_PORT = process.env.DB_PORT || 27017
 const DB_NAME = process.env.DB_NAME || 'tt-spring2020-test'
 
-const startDB = async (callback) => {
+const startDB = async () => {
     const url = `mongodb://${DB_HOST}:${DB_PORT}`
     const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
@@ -12,13 +12,12 @@ const startDB = async (callback) => {
 
     try {
         await client.connect()
-        console.log(`Connection to database at ${url} completed successfully!`)
         const db = client.db(DB_NAME)
-        await callback(db);
+        console.log(`Connection to '${db.databaseName}' at ${url} completed successfully!`)
+        return { client, db };
     } catch(err) {
         console.log(err.stack)
-    } finally {
-        client.close();
+        return { client }
     }
 }
 
