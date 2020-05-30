@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
     <title>Tech Transit - Courses</title>
 </head>
 <body>
-    <h1>Welcome :)</h1>
+    <header>
+        <img id="menu-icon" src="./assets/menu-black-24dp.svg" alt="Menu icon" />
+        <h1 id="title">Course Catalog - Tech Transit</h1>
+        <form action="" id="sliders">
+            <div class="slider-container">
+                <label for="credits">Credits</label>
+                <input type="range" id="credits" name="credits" />
+            </div>
+            <div class="slider-container">
+                <label for="stars">Stars</label>
+                <input type="range" id="stars" name="stars" />
+            </div>
+            <div class="slider-container">
+                <label for="price">Price</label>
+                <input type="range" id="price" name="price" />
+            </div>
+        </form>
+    </header>
+    <section id="courses-container">
+        <section id="course-0000" class="course">
+            <img src="" alt="" class="course-img" />
+            <h1 class="course-title">Title</h1>
+            <p class="course-desc">Description</p>
+            <p class="course-price">$price</p>
+            <p class="course-credits">Credits</p>
+            <div class="course-rating">
+                <div class="empty-stars">
+                    <img src="./assets/star_border-24px.svg" alt="Empty star rate" />
+                </div>
+                <div class="full-stars">
+                    <img src="./assets/star-24px.svg" alt="Full star rate" />
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="pagination"></section>
     <script type="text/javascript" src="https://www.techtransit.com/mission.courses/coursesData.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>

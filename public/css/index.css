@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#course-0000 {
+    display: none;
+}
+
+.course-rating {
+    width: fit-content;
+    max-height: min-content;
+}
+
+.empty-stars {
+    max-height: fit-content;
+    position: absolute;
+}
+
+.full-stars {
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.course-img {
+    max-width: 100px;
+    max-height: 100px;
+}
