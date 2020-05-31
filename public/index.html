@@ -4,46 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/slider.css" type="text/css">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
     <title>Tech Transit - Courses</title>
 </head>
 <body>
     <header>
-        <img id="menu-icon" src="./assets/menu-black-24dp.svg" alt="Menu icon" />
-        <h1 id="title">Course Catalog - Tech Transit</h1>
         <form action="" id="sliders">
             <div class="slider-container">
                 <label for="credits">Credits</label>
                 <input type="range" id="credits" name="credits" />
+                <label for="credits" id="credits-label">All</label>
             </div>
             <div class="slider-container">
                 <label for="stars">Stars</label>
                 <input type="range" id="stars" name="stars" />
+                <label for="credits" id="stars-label">All</label>
             </div>
             <div class="slider-container">
                 <label for="price">Price</label>
                 <input type="range" id="price" name="price" />
+                <label for="credits" id="price-label">All</label>
             </div>
         </form>
     </header>
     <section id="courses-container">
+        <h1 id="title">Course Catalog - Tech Transit</h1>
+        <div id="search-container">
+            <label for="search" class="search-label">Search by course name: </label>
+            <input id="search" type="text" name="search" />
+        </div>
         <section id="course-0000" class="course">
             <img src="" alt="" class="course-img" />
             <h1 class="course-title">Title</h1>
-            <p class="course-desc">Description</p>
             <p class="course-price">$price</p>
             <p class="course-credits">Credits</p>
+            <p class="course-desc">Description</p>
             <div class="course-rating">
                 <div class="empty-stars">
-                    <img src="./assets/star_border-24px.svg" alt="Empty star rate" />
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="star">
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
+                    </svg>
                 </div>
                 <div class="full-stars">
-                    <img src="./assets/star-24px.svg" alt="Full star rate" />
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="star">
+                        <path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
                 </div>
             </div>
         </section>
     </section>
-    <section id="pagination"></section>
+    <footer>
+        <p id="footer-label">Showing all courses (303)</p>
+        <a href="#courses-container" id="home">Go up</a>
+    </footer>
     <script type="text/javascript" src="https://www.techtransit.com/mission.courses/coursesData.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
 </body>

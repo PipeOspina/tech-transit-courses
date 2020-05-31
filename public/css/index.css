@@ -1,31 +1,232 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    border: 0;
+* {
+    font-family:'Open Sans', sans-serif;
+}
+
+a {
+    color:green;
+    text-decoration:none;
+}
+
+a:hover {
+    color:#3CB371;
+}
+
+footer {
+    align-items:center;
+    background-color:#90EE90;
+    bottom:0;
+    display:flex;
+    flex-direction:column;
+    padding-bottom:1rem;
+    position:fixed;
+    width:100vw;
+    z-index:2;
+}
+
+form {
+    display:flex;
+    justify-content:center;
+}
+
+h1,button {
+    font-family:Roboto, sans-serif;
+}
+
+header {
+    background-color:#F0FFF0;
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.1);
+    left:0;
+    overflow:auto;
+    position:fixed;
+    top:0;
+    width:100vw;
+    z-index:2;
+}
+
+html,body {
+    border:0;
+    margin:0;
+    padding:0;
+}
+
+input[type=range] {
+    -webkit-appearance:none;
+    margin:.5rem;
+    width:90%;
 }
 
 #course-0000 {
-    display: none;
+    display:none;
 }
 
-.course-rating {
-    width: fit-content;
-    max-height: min-content;
+#courses-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:5rem;
+    width:100vw;
 }
 
-.empty-stars {
-    max-height: fit-content;
-    position: absolute;
+#footer-label {
+    color:green;
+    margin:0;
+    padding:.5rem;
 }
 
-.full-stars {
-    width: 90%;
-    overflow: hidden;
-    white-space: nowrap;
+#home {
+    font-size:.7rem;
+    margin:0;
+    padding:0;
+}
 
+#search {
+    border:1px solid #3CB371;
+    border-radius:.5rem;
+    padding:.5rem;
+    width:15rem;
+}
+
+#search-container {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:1rem;
+    width:100vw;
+}
+
+#search:hover {
+    border:1.5px solid #3CB371;
+}
+
+#title {
+    font-size:2.5rem;
+    margin:5rem 0 0;
+    padding:1rem;
+    text-align:center;
+    width:100vw;
+}
+
+.course {
+    background-color:#FFF;
+    border-radius:.5rem;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.1);
+    display:grid;
+    grid-template-areas:"img img img img" ". title title ." ". price credits ." ". desc desc ." ". rating rating .";
+    grid-template-columns:1fr 45% 45% 1fr;
+    grid-template-rows:repeat(5,auto);
+    margin:1rem auto;
+    overflow:hidden;
+    width:90vw;
+}
+
+.course-credits {
+    border:.1rem solid #3CB371;
+    grid-area:credits;
+    margin-left:1rem;
+}
+
+.course-desc {
+    grid-area:desc;
+    margin:1rem auto;
+    padding:0;
+    text-align:center;
 }
 
 .course-img {
-    max-width: 100px;
-    max-height: 100px;
+    grid-area:img;
+    height:7rem;
+    margin:0;
+    object-fit:cover;
+    width:100%;
+}
+
+.course-price {
+    background-color:#3CB371;
+    border:.1rem solid #3CB371;
+    color:#FFF;
+    grid-area:price;
+    margin-right:1rem;
+}
+
+.course-price,.course-credits {
+    border-radius:.3rem;
+    margin:.6rem auto;
+    padding:.3rem 1rem;
+}
+
+.course-rating {
+    grid-area:rating;
+    margin:1rem auto;
+    width:fit-content;
+}
+
+.course-title {
+    font-size:1.5rem;
+    grid-area:title;
+    margin:1rem auto;
+    padding:0;
+    text-align:center;
+}
+
+.course:hover {
+    background-color:#F0FFF0;
+}
+
+.course:hover .course-img {
+    height:auto;
+}
+
+.empty-stars {
+    max-height:fit-content;
+    position:absolute;
+    z-index:1;
+}
+
+.full-stars {
+    overflow:hidden;
+    white-space:nowrap;
+    width:90%;
+}
+
+.search-label {
+    color:#3CB371;
+    margin-bottom:.5rem;
+}
+
+.slider-container {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    padding:.5rem 0;
+}
+
+.star {
+    height:2rem;
+    width:2rem;
+}
+
+@media(min-width: 700px) {
+    #courses-container {
+        align-items:flex-start;
+        justify-items:center;
+        margin:auto auto 5rem;
+        max-width:90vw;
+    }
+
+    #search {
+        width:25rem;
+    }
+
+    .course {
+        width:20rem;
+    }
+
+    .course-img {
+        height:10rem;
+    }
+
+    .course:hover {
+        margin:0 auto;
+        width:25rem;
+    }
 }
