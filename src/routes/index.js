@@ -34,9 +34,6 @@ router
     .use(logger)
     .use(express.static(path.join(__dirname, '..', '..', 'public')))
     .use(coursesRoute)
-    .use((req, res) => {
-        
-    })
     .use(notFound)
 
 module.exports = router
