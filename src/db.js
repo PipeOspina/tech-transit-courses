@@ -13,8 +13,7 @@ const startDB = async () => {
         const db = client.db(DB_NAME)
         return { client, db };
     } catch(err) {
-        console.log(err.stack)
-        return { client }
+        return { client, err }
     }
 }
 

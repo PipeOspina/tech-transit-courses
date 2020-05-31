@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const path = require('path')
+const favicon = require('serve-favicon')
 
 const coursesRoute = require('./courses')
 
@@ -29,6 +30,7 @@ const notFound = (req, res) => {
 }
 
 router
+    .use(favicon(path.join('public', 'favicon.ico')))
     .use(logger)
     .use(express.static(path.join(__dirname, '..', '..', 'public')))
     .use(coursesRoute)

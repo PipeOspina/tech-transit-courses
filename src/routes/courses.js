@@ -14,6 +14,7 @@ const getCourses = async (req, res) => {
     }
     try {
         const courses = await getCoursesDB(queryToDB)
+        if(courses instanceof Error) throw courses
         res.json(courses)
         const msg = courses.length === 1 ? 
             `1 course sended.` :

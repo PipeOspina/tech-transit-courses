@@ -164,7 +164,6 @@ const applyFilter = (event) => {
         ...filters,
         [event.target.id]: value
     }
-    console.log(filters)
     const allCourses = window._courses
     const filteredCourses = allCourses.filter((course) => {
         return (
